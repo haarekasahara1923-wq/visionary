@@ -7,10 +7,16 @@ import { desc } from "drizzle-orm";
 export const revalidate = 0; // always fresh from DB
 
 export default async function GalleryPage() {
-  const items = await db
-    .select()
-    .from(galleryItems)
-    .orderBy(desc(galleryItems.createdAt));
+  let items: any[] = [];
+  let errorMsg = '';
+  try {
+    items = await db
+      .select()
+      .from(galleryItems)
+      .orderBy(desc(galleryItems.createdAt));
+  } catch (err: any) {
+    errorMsg = err.message || String(err);
+  }
 
   const mappedItems = items.map((item) => ({
     id: item.id,
@@ -28,7 +34,13 @@ export default async function GalleryPage() {
         <p className={styles.subtitle}>Glimpses of life at Visionary Minds School</p>
       </div>
 
-      {mappedItems.length === 0 ? (
+      {errorMsg ? (
+        <div className={styles.gridWrap}>
+          <div className={styles.emptyState} style={{ color: 'red' }}>
+            <p>Database Error: {errorMsg}</p>
+          </div>
+        </div>
+      ) : mappedItems.length === 0 ? (
         <div className={styles.gridWrap}>
           <div className={styles.emptyState}>
             <p>No media uploaded yet. Check back soon! 📸</p>
