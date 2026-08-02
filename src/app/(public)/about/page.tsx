@@ -1,14 +1,23 @@
-import styles from "./about.module.css";
+﻿import styles from "./about.module.css";
 import { db } from "@/db";
 import { aboutContent, siteSettings } from "@/db/schema";
 
 export const revalidate = 0;
 
 export default async function AboutPage() {
-  const [items, settings] = await Promise.all([
+  let items: any[] = [];
+  let settings: any[] = [];
+  let errorMsg = '';
+  try {
+    const [i, s] = await Promise.all([
     db.select().from(aboutContent),
     db.select().from(siteSettings)
-  ]);
+    ]);
+    items = i;
+    settings = s;
+  } catch (err: any) {
+    errorMsg = err.message || String(err);
+  }
 
   const settingsMap: Record<string, string> = {};
   settings.forEach(s => {
@@ -45,7 +54,7 @@ export default async function AboutPage() {
           </div>
           <div className={styles.textContent}>
             <h2 className={styles.roleTitle}>Director&apos;s Message</h2>
-            <h3 className={styles.name}>{director?.name || "—"}</h3>
+            <h3 className={styles.name}>{director?.name || "â€”"}</h3>
             {director?.designation && (
               <p style={{ color: "#777", marginBottom: "10px", fontStyle: "italic" }}>{director.designation}</p>
             )}
@@ -69,7 +78,7 @@ export default async function AboutPage() {
           </div>
           <div className={styles.textContent}>
             <h2 className={styles.roleTitle}>Principal&apos;s Message</h2>
-            <h3 className={styles.name}>{principal?.name || "—"}</h3>
+            <h3 className={styles.name}>{principal?.name || "â€”"}</h3>
             {principal?.designation && (
               <p style={{ color: "#777", marginBottom: "10px", fontStyle: "italic" }}>{principal.designation}</p>
             )}
@@ -93,3 +102,4 @@ export default async function AboutPage() {
     </div>
   );
 }
+
