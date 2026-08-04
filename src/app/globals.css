@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap');
 
 :root {
-  --primary:       #E67E22;
-  --primary-color: #E67E22;
-  --primary-hover: #D68910;
-  --primary-dark:  #C0392B;
-  --secondary:     #6F4E37;
-  --secondary-color: #1A1A2E;
-  --accent:        #F39C12;
-  --gold:          #D4AF37;
-  --bg:            #FFFDF9;
-  --bg-dark:       #1A1A2E;
+  --primary:       #1a3a8f;
+  --primary-color: #1a3a8f;
+  --primary-hover: #1430c9;
+  --primary-dark:  #0f2460;
+  --secondary:     #1a3a8f;
+  --secondary-color: #0f2460;
+  --accent:        #4a90d9;
+  --gold:          #c0c8e8;
+  --bg:            #f5f7ff;
+  --bg-dark:       #0a1540;
   --surface:       #FFFFFF;
-  --text-dark:     #1C1C1C;
-  --text-mid:      #4A4A4A;
-  --text-light:    #767676;
+  --text-dark:     #0f1e4a;
+  --text-mid:      #3a4a7a;
+  --text-light:    #6272a8;
   --white:         #FFFFFF;
-  --border:        #E8E0D5;
-  --shadow-sm:     0 2px 8px rgba(0,0,0,0.08);
-  --shadow-md:     0 8px 30px rgba(0,0,0,0.12);
-  --shadow-lg:     0 20px 60px rgba(0,0,0,0.18);
+  --border:        #d0d8f0;
+  --shadow-sm:     0 2px 8px rgba(26,58,143,0.10);
+  --shadow-md:     0 8px 30px rgba(26,58,143,0.15);
+  --shadow-lg:     0 20px 60px rgba(26,58,143,0.22);
   --radius-sm:     8px;
   --radius-md:     16px;
   --radius-lg:     24px;
@@ -76,13 +76,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(230,126,34,0.35);
+  box-shadow: 0 4px 20px rgba(26,58,143,0.35);
   letter-spacing: 0.3px;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(230,126,34,0.5);
+  box-shadow: 0 8px 30px rgba(26,58,143,0.5);
 }
 
 .btn-secondary {
@@ -147,7 +147,7 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(230,126,34,0.15);
+  box-shadow: 0 0 0 3px rgba(26,58,143,0.15);
 }
 
 /* ===================== ANIMATIONS ===================== */
@@ -187,8 +187,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(230,126,34,0.4); }
-  50%       { box-shadow: 0 0 0 12px rgba(230,126,34,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26,58,143,0.4); }
+  50%       { box-shadow: 0 0 0 12px rgba(26,58,143,0); }
 }
 
 .animate-fade-in   { animation: fadeInUp 0.7s ease both; }
@@ -201,7 +201,7 @@ input:focus, textarea:focus, select:focus {
 /* ===================== SECTION UTILITY ===================== */
 .section-label {
   display: inline-block;
-  background: linear-gradient(135deg, rgba(230,126,34,0.12), rgba(243,156,18,0.12));
+  background: linear-gradient(135deg, rgba(26,58,143,0.10), rgba(74,144,217,0.10));
   color: var(--primary);
   font-family: var(--font-heading);
   font-size: 0.78rem;
@@ -210,7 +210,7 @@ input:focus, textarea:focus, select:focus {
   text-transform: uppercase;
   padding: 6px 18px;
   border-radius: 50px;
-  border: 1px solid rgba(230,126,34,0.25);
+  border: 1px solid rgba(26,58,143,0.25);
   margin-bottom: 16px;
 }
 
@@ -241,7 +241,7 @@ input:focus, textarea:focus, select:focus {
 
 /* ===================== GRADIENT TEXT ===================== */
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary), var(--gold));
+  background: linear-gradient(135deg, #4a90d9, #1a3a8f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

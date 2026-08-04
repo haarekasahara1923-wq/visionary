@@ -48,12 +48,14 @@ export default function Home() {
           <div className={`${styles.heroBadge} animate-fade-in`}>
             🏆 &nbsp; Affiliated & Recognized School — Gwalior, MP
           </div>
-          <h1 className={`${styles.heroTitle} animate-fade-in-2`}>
-            Empowering Minds,<br />
-            <span className={styles.heroTitleAccent}>Shaping Futures</span>
+          <h1 className={`${styles.heroSchoolName} animate-fade-in-2`}>
+            Visionary Minds School
           </h1>
+          <p className={`${styles.heroTagline} animate-fade-in-2`}>
+            ✦ Empowering Minds &nbsp;·&nbsp; Shaping Futures &nbsp;·&nbsp; Building Leaders ✦
+          </p>
           <p className={`${styles.heroSubtitle} animate-fade-in-3`}>
-            Welcome to Visionary Minds School — where vision meets modern education to nurture the confident leaders of tomorrow.
+            Where vision meets modern education — nurturing confident, compassionate leaders of tomorrow in Gwalior, MP.
           </p>
           <div className={`${styles.ctaGroup} animate-fade-in-3`}>
             <button className="btn-primary" onClick={() => setIsLeadFormOpen(true)}>

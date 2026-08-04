@@ -3,15 +3,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 5%;
-  background: rgba(255, 253, 249, 0.92);
+  background: rgba(245, 247, 255, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.08), 0 4px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 0 rgba(26,58,143,0.10), 0 4px 20px rgba(26,58,143,0.08);
   position: sticky;
   top: 0;
   z-index: 200;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(230,126,34,0.1);
+  border-bottom: 1px solid rgba(26,58,143,0.12);
 }
 
 .logoContainer {
@@ -27,8 +27,8 @@
   height: 54px;
   border-radius: 50%;
   padding: 2px;
-  background: linear-gradient(135deg, var(--primary), var(--gold));
-  box-shadow: 0 4px 14px rgba(230,126,34,0.3);
+  background: linear-gradient(135deg, #1a3a8f, #4a90d9);
+  box-shadow: 0 4px 14px rgba(26,58,143,0.30);
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -71,12 +71,12 @@
 
 .navLink:hover {
   color: var(--primary);
-  background: rgba(230,126,34,0.07);
+  background: rgba(26,58,143,0.08);
 }
 
 .active {
   color: var(--primary);
-  background: rgba(230,126,34,0.1);
+  background: rgba(26,58,143,0.10);
   font-weight: 600;
 }
 
@@ -84,7 +84,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, var(--primary), #C0392B);
+  background: linear-gradient(135deg, #1a3a8f, #0f2460);
   color: var(--white);
   padding: 10px 22px;
   border-radius: 50px;
@@ -92,13 +92,13 @@
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(230,126,34,0.35);
+  box-shadow: 0 4px 14px rgba(26,58,143,0.35);
   letter-spacing: 0.2px;
 }
 
 .callButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(230,126,34,0.5);
+  box-shadow: 0 8px 24px rgba(26,58,143,0.50);
 }
 
 .headerRight {
@@ -129,11 +129,11 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(255, 253, 249, 0.98);
+    background: rgba(245, 247, 255, 0.98);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(230,126,34,0.1);
+    border-bottom: 1px solid rgba(26,58,143,0.12);
     padding: 20px 0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 20px rgba(26,58,143,0.08);
   }
 
   .nav.navOpen {

@@ -9,10 +9,10 @@
   text-align: center;
   background: linear-gradient(
     160deg,
-    rgba(28, 20, 12, 0.75) 0%,
-    rgba(111, 78, 55, 0.55) 50%,
-    rgba(0, 0, 0, 0.65) 100%
-  ), url('/images/hero_school.jpg') center/cover no-repeat;
+    rgba(10, 21, 64, 0.82) 0%,
+    rgba(26, 58, 143, 0.65) 50%,
+    rgba(5, 10, 35, 0.80) 100%
+  ), url('/images/hero_school_royal_blue.jpg') center/cover no-repeat;
   color: var(--white);
   overflow: hidden;
 }
@@ -20,7 +20,7 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 80%, rgba(230,126,34,0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 80%, rgba(74,144,217,0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -48,6 +48,42 @@
   margin-bottom: 28px;
 }
 
+.heroSchoolName {
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+  text-shadow: 0 4px 32px rgba(74,144,217,0.5), 0 2px 8px rgba(0,0,0,0.4);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.heroSchoolName::after {
+  content: '';
+  display: block;
+  margin: 14px auto 0;
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #4a90d9, #ffffff, #4a90d9);
+  animation: shimmer 2.5s linear infinite;
+  background-size: 300% 100%;
+}
+
+.heroTagline {
+  font-family: var(--font-heading);
+  font-size: clamp(0.88rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: rgba(200, 222, 255, 0.95);
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* kept for backward compat */
 .heroTitle {
   font-family: var(--font-heading);
   font-size: clamp(2.8rem, 6vw, 5rem);
@@ -59,7 +95,7 @@
 }
 
 .heroTitleAccent {
-  background: linear-gradient(135deg, #F39C12, #E67E22, #E74C3C);
+  background: linear-gradient(135deg, #7eb8ff, #c8deff, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -105,7 +141,7 @@
 
 /* ===== STATS BAR ===== */
 .statsBar {
-  background: linear-gradient(135deg, #6F4E37, #3D2314);
+  background: linear-gradient(135deg, #1a3a8f, #0f2460);
   color: var(--white);
   padding: 48px 6%;
   display: flex;
@@ -122,7 +158,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary), var(--accent), var(--gold), var(--primary));
+  background: linear-gradient(90deg, #4a90d9, #c0c8e8, #ffffff, #4a90d9);
   background-size: 300% 100%;
   animation: shimmer 3s linear infinite;
 }
@@ -144,7 +180,7 @@
   font-family: var(--font-heading);
   font-size: 2.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #F39C12, #E67E22);
+  background: linear-gradient(135deg, #7eb8ff, #c8deff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -213,14 +249,14 @@
   position: absolute;
   bottom: -20px;
   left: -20px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: linear-gradient(135deg, #1a3a8f, #0f2460);
   color: white;
   border-radius: var(--radius-md);
   padding: 16px 24px;
   display: flex;
   align-items: center;
   gap: 14px;
-  box-shadow: 0 8px 24px rgba(230,126,34,0.4);
+  box-shadow: 0 8px 24px rgba(26,58,143,0.45);
 }
 
 .badgeIcon {
@@ -241,7 +277,7 @@
 
 /* ===== FEATURES ===== */
 .featuresSection {
-  background: linear-gradient(180deg, #FFF5EC 0%, var(--bg) 100%);
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
   padding: 100px 6%;
 }
 
@@ -274,7 +310,7 @@
   top: 0; left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(180deg, var(--primary), var(--accent));
+  background: linear-gradient(180deg, #1a3a8f, #4a90d9);
   opacity: 0;
   transition: var(--transition);
   z-index: 10;
@@ -323,9 +359,9 @@
 .ctaBanner {
   background: linear-gradient(
     135deg,
-    rgba(28, 20, 12, 0.85) 0%,
-    rgba(111, 78, 55, 0.75) 100%
-  ), url('/images/hero_school.jpg') center/cover no-repeat fixed;
+    rgba(10, 21, 64, 0.92) 0%,
+    rgba(26, 58, 143, 0.82) 100%
+  ), url('/images/hero_school_royal_blue.jpg') center/cover no-repeat fixed;
   padding: 100px 6%;
   text-align: center;
   color: var(--white);
@@ -337,7 +373,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 50%, rgba(230,126,34,0.2), transparent 70%);
+  background: radial-gradient(ellipse at 50% 50%, rgba(74,144,217,0.22), transparent 70%);
   pointer-events: none;
 }
 
@@ -364,7 +400,7 @@
 }
 
 .ctaBannerBtn {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: linear-gradient(135deg, #4a90d9, #1a3a8f);
   color: white;
   border: none;
   padding: 16px 40px;
@@ -374,14 +410,14 @@
   font-weight: 700;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 8px 30px rgba(230,126,34,0.4);
+  box-shadow: 0 8px 30px rgba(26,58,143,0.45);
   letter-spacing: 0.4px;
   animation: pulse-glow 2.5s ease infinite;
 }
 
 .ctaBannerBtn:hover {
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 40px rgba(230,126,34,0.6);
+  box-shadow: 0 12px 40px rgba(26,58,143,0.65);
 }
 
 /* ===== RESPONSIVE ===== */
